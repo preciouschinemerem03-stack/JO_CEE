@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOCÉE - Premium Clothes That Make You Shine</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo"><img src="logo.jpeg" width="100px" height="70px" alt=""></h1>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <span onclick="toggleCart()">🛒 <span id="cartCount">0</span></span>
+        <span class="menu-btn" onclick="toggleMenu()">☰</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>New Season. New You.</h2>
+      <p>Shop premium clothes from JOCÉE</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS: CLOTHES ONLY -->
+  <section class="products container" id="shop">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+      
+      <!-- PRODUCT 1 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="pic1.jpeg" alt="Royal Heritage Set">
+        <h4>Royal Heritage Set</h4>
+        <p class="price">$45</p>
+        <button class="btn" onclick="addToCart('Royal Heritage Set', 25000)">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 2 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="pic2.jpeg" alt="Elegant Evening Gown">
+        <h4>Elegant Evening Gown</h4>
+        <p class="price">$30</p>
+        <button class="btn" onclick="addToCart('Elegant Evening Gown', 45000)">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 3 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="pic3.jpeg" alt="Casual Two Piece Set">
+        <h4>Casual Two Piece Set</h4>
+        <p class="price">$25</p>
+        <button class="btn" onclick="addToCart('Casual Two Piece Set', 18000)">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 4 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="pic4.jpeg" alt="Pink Office Two Piece">
+        <h4> Two Piece</h4>
+        <p class="price">$50</p>
+        <button class="btn" onclick="addToCart(' Two Piece', 22000)">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 5 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="images (4).jpg" alt="Blue Silk Two Piece">
+        <h4>Blue Silk Two Piece</h4>
+        <p class="price">$40</p>
+        <button class="btn" onclick="addToCart('Blue Silk Two Piece', 30000)">Add to Cart</button>
+      </div>
+
+      <!-- PRODUCT 6 - EDIT IMAGE HERE -->
+      <div class="product">
+        <img src="images (3).jpg" alt="Yellow Summer Dress">
+        <h4>Yellow Summer Dress</h4>
+        <p class="price">$35</p>
+        <button class="btn" onclick="addToCart('Yellow Summer Dress', 16000)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about container" id="about">
+    <h2>About JO_CEEZ</h2>
+    <p>At JO_CEEZ, we believe fashion is how you tell your story without speaking. 
+    We design premium clothes for the modern Children. 
+    Based in Ontario, delivering nationwide.</p>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart" id="cart">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p><b>Total: ₦<span id="cartTotal">0</span></b></p>
+    <button class="btn" onclick="checkout()">Checkout via WhatsApp</button>
+    <button class="btn btn-close" onclick="toggleCart()">Close</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2026 JO_CEEZ. All rights reserved. | Ontario, Canada</p>
+    <p>WhatsApp: +1 289 500 2206</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
